@@ -1,5 +1,13 @@
-package org.example;public class Main {
+package org.example;
+
+import java.util.Scanner;
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        DVDService dvdService=new DVDService();
+        Scanner scanner=new Scanner(System.in);
+        DigitalVideoDisc disc=new DigitalVideoDisc();
+        dvdService.insert(disc,scanner);
+        dvdService.list();
     }
 }
