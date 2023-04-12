@@ -1,4 +1,7 @@
-import java.util.InputMismatchException;
+package bai1;
+
+import bai1.DigitalVideoDisc;
+
 import java.util.Scanner;
 
 public class Order {
@@ -55,7 +58,7 @@ public class Order {
 
     public void addDigitalVideoDisc(DigitalVideoDisc disc){
         if(qtyOrdered==MAX_NUMBERS_ORDERED){
-            System.out.println("Order list is full. Can't add new item.");
+            System.out.println("bai1.Order list is full. Can't add new item.");
             return;
         }
         if(checkDigitalVideo(disc)){
@@ -105,7 +108,7 @@ public class Order {
 
     public void list(){
         if(qtyOrdered==0){
-            System.out.println("Order list is null!");
+            System.out.println("bai1.Order list is null!");
             return;
         }
         System.out.println("List of video: ");

@@ -1,3 +1,5 @@
+package bai1;
+
 public class DigitalVideoDisc {
     private String title;
     private String category;
@@ -74,7 +76,7 @@ public class DigitalVideoDisc {
 
     @Override
     public String toString() {
-        return "DigitalVideoDisc{" +
+        return "bai1.DigitalVideoDisc{" +
                 "title='" + title + '\'' +
                 ", category='" + category + '\'' +
                 ", director='" + director + '\'' +
