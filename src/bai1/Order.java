@@ -1,14 +1,21 @@
 package bai1;
 
-import bai1.DigitalVideoDisc;
-
+import java.util.Date;
 import java.util.Scanner;
 
 public class Order {
     public static final int MAX_NUMBERS_ORDERED=10;
-    private final DigitalVideoDisc[] itemsOrdered = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+    private final DigitalVideoDisc[] itemsOrdered = new DigitalVideoDisc[MAX_NUMBERS_ORDERED+1];
 
     private int qtyOrdered=0;
+    private Date dateOrdered;
+
+    public static final int MAX_LIMITED_ORDERS=5;
+
+    private static int nbOrders=0;
+    public Order(){
+        nbOrders++;
+    }
 
     public int getQtyOrdered() {
         return qtyOrdered;
@@ -18,7 +25,19 @@ public class Order {
         this.qtyOrdered = qtyOrdered;
     }
 
+    public Date getDateOrdered() {
+        return dateOrdered;
+    }
+
+    public void setDateOrdered() {
+        this.dateOrdered = new Date();
+    }
+
     public DigitalVideoDisc input(DigitalVideoDisc disc, Scanner scanner){
+        if(nbOrders == MAX_LIMITED_ORDERS){
+            System.out.println("Cannot order!");
+            return null;
+        }
         boolean check=false;
         System.out.println("Input title: ");
         disc.setTitle(scanner.nextLine());
@@ -56,16 +75,61 @@ public class Order {
         return disc;
     }
 
-    public void addDigitalVideoDisc(DigitalVideoDisc disc){
+    public int addDigitalVideoDisc(DigitalVideoDisc disc){
+        if(nbOrders == MAX_LIMITED_ORDERS){
+            System.out.println("Cannot order!");
+            return 0;
+        }
         if(qtyOrdered==MAX_NUMBERS_ORDERED){
-            System.out.println("bai1.Order list is full. Can't add new item.");
-            return;
+            System.out.println("Order list is full. Can't add new item.");
+            return 0;
         }
         if(checkDigitalVideo(disc)){
             qtyOrdered++;
             itemsOrdered[qtyOrdered]=disc;
             System.out.println("Add digital video success");
+            return 1;
         }
+        return 0;
+    }
+
+    public void addDigitalVideoDisc(Scanner scanner){
+        if(nbOrders == MAX_LIMITED_ORDERS){
+            System.out.println("Cannot order!");
+            return;
+        }
+        if(qtyOrdered==MAX_NUMBERS_ORDERED){
+            System.out.println("Order list is full. Can't add new item.");
+            return;
+        }
+        int n = 0;
+        boolean check=false;
+        while(!check){
+            try {
+                System.out.println("Input number of video: ");
+                n=Integer.parseInt(scanner.nextLine());
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+            check=true;
+        }
+        DigitalVideoDisc[] dvdList = new DigitalVideoDisc[n];
+        for(int i=0;i<n;i++){
+            dvdList[i]=new DigitalVideoDisc();
+            dvdList[i]=input(dvdList[i],scanner);
+            int res=addDigitalVideoDisc(dvdList[i]);
+            if(res==0) return;
+        }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc disc1, DigitalVideoDisc disc2, Scanner scanner){
+        System.out.println("Add video 1: ");
+        disc1=input(disc1,scanner);
+        addDigitalVideoDisc(disc1);
+
+        System.out.println("Add video 2: ");
+        disc2=input(disc2,scanner);
+        addDigitalVideoDisc(disc2);
     }
 
 
@@ -108,7 +172,7 @@ public class Order {
 
     public void list(){
         if(qtyOrdered==0){
-            System.out.println("bai1.Order list is null!");
+            System.out.println("Order list is null!");
             return;
         }
         System.out.println("List of video: ");
