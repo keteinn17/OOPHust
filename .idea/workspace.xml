@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78c92563-9881-4e8d-ab2c-053e9eec011b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bai1/TestPassingParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/Aims.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1/Aims.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1/Order.java" afterDir="false" />
-    </list>
+    <list default="true" id="78c92563-9881-4e8d-ab2c-053e9eec011b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +92,7 @@
       <workItem from="1681266685751" duration="3806000" />
       <workItem from="1681698474103" duration="4531000" />
       <workItem from="1682066480094" duration="2729000" />
-      <workItem from="1682179521893" duration="311000" />
+      <workItem from="1682179521893" duration="752000" />
     </task>
     <servers />
   </component>
