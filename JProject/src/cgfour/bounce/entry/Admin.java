@@ -72,7 +72,7 @@ public class Admin extends JPanel implements ActionListener {
 
         // login background
         try {
-            background  =  new JLabel( new ImageIcon("res/back.png") );
+            background  =  new JLabel( new ImageIcon("JProject/res/back.png") );
             background.setBounds(0, 0, 700, 500);
             this.add(background);
         } catch (Exception e) {
@@ -88,7 +88,7 @@ public class Admin extends JPanel implements ActionListener {
         String [][]row = new String[100][3];
         try {
             Class.forName("com.mysql.jdbc.Driver"); //load driver
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "123456");
             st = con.createStatement();  //create statement
             rs = st.executeQuery(query); //getting result
 
@@ -113,7 +113,7 @@ public class Admin extends JPanel implements ActionListener {
        // table.setForeground(Color.WHITE);
         table.setFont(new Font("Consolas", Font.BOLD, 16));
         scrollPane = new JScrollPane(table);
-        scrollPane.setBounds(155, 40, 395, 115);
+        scrollPane.setBounds(155, 40, 395, 130);
         this.add(scrollPane);
     }
 
@@ -142,7 +142,7 @@ public class Admin extends JPanel implements ActionListener {
                     String query = "select * from user where username='"+searchBar.getText()+"'";
                     Class.forName("com.mysql.jdbc.Driver");         // loading driver
                     System.out.println("driver loaded");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","123456");
                     System.out.println("connection done");          // connection with database established
                     Statement st = con.createStatement();  			// creates statement
                     System.out.println("statement created");
@@ -185,7 +185,7 @@ public class Admin extends JPanel implements ActionListener {
                     String query  =  "select * from user where username='"+searchBar.getText()+"'";
                     Class.forName("com.mysql.jdbc.Driver");  // loading driver
                     System.out.println("driver loaded");
-                    Connection con  =  DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");
+                    Connection con  =  DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","123456");
                     System.out.println("connection done");   // connection with database established
                     Statement st  =  con.createStatement();  // creates statement
                     System.out.println("statement created");

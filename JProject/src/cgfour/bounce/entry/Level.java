@@ -37,7 +37,7 @@ public class Level extends JPanel implements ActionListener {
 	}
 	
 	public void panelGo() {
-		logo = new JLabel(new ImageIcon("res/Bounce.png"));
+		logo = new JLabel(new ImageIcon("JProject/res/Bounce.png"));
 		logo.setBounds(155, 40, 395, 115);
 		this.add(logo);
 
@@ -90,7 +90,7 @@ public class Level extends JPanel implements ActionListener {
 		
 		// Frame background
 		try {
-			background = new JLabel( new ImageIcon("res/back.png") );
+			background = new JLabel( new ImageIcon("JProject/res/back.png") );
 			background.setBounds(0, 0, 700, 500);
 			this.add(background);	
 		} catch (Exception e) {

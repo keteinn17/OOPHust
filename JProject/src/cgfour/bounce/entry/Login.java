@@ -25,7 +25,7 @@ public class Login extends JFrame implements ActionListener {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         try {
-            this.setIconImage(ImageIO.read(new File("res/icon.png")));
+            this.setIconImage(ImageIO.read(new File("JProject/res/icon.png")));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -125,7 +125,7 @@ public class Login extends JFrame implements ActionListener {
                 try {
                     Class.forName("com.mysql.jdbc.Driver"); // loading driver
                     System.out.println("driver loaded");
-                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");
+                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","123456");
                     System.out.println("connection done");  // connection with database established
                     st = con.createStatement();  			// creates statement
                     System.out.println("statement created");

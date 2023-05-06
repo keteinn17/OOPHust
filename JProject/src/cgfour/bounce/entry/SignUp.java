@@ -23,7 +23,7 @@ public class SignUp extends JPanel implements ActionListener {
 
     private void panelInit() {
         // Game logo
-        logo = new JLabel(new ImageIcon("res/Bounce.png"));
+        logo = new JLabel(new ImageIcon("JProject/res/Bounce.png"));
         logo.setBounds(155, 40, 395, 115);
         this.add(logo);
 
@@ -103,7 +103,7 @@ public class SignUp extends JPanel implements ActionListener {
 
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
-                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "");
+                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "123456");
                     st = con.createStatement();
                     st.execute(query);
                     query = "INSERT INTO `leaderboard` VALUES ('"+username.getText()+"', 0)";

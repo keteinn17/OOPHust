@@ -14,11 +14,11 @@ public class GameState extends State {
 	public GameState(Handler handler, int levIdx) {
 		super(handler);
 		if (levIdx == 1) 
-			world = new World(handler, "map/Level1.txt");
+			world = new World(handler, "JProject/map/Level1.txt");
 		else if (levIdx == 2) 
-			world = new World(handler, "map/Level2.txt");
+			world = new World(handler, "JProject/map/Level2.txt");
 		else if (levIdx == 3) 
-			world = new World(handler, "map/Level3.txt");
+			world = new World(handler, "JProject/map/Level3.txt");
 		
 		handler.setWorld(world);
 	}

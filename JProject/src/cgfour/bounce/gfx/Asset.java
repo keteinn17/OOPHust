@@ -12,7 +12,7 @@ public class Asset {
 	
 	public static void init(int levIdx) {
 		try {
-			BufferedImage img = ImageIO.read( new File("res/sprite.png") );
+			BufferedImage img = ImageIO.read( new File("JProject/res/sprite.png") );
 			SpriteSheet sheet = new SpriteSheet(img);
 			
 			if (levIdx == 1) 
@@ -23,11 +23,11 @@ public class Asset {
 				player = sheet.crop(0, 1969, 70, 70);
 			
 			plane  = sheet.crop(1802, 497, 70, 70);
-			coin2  = ImageIO.read( new File("res/coin.png") );
-			coin   = ImageIO.read( new File("res/sky.png") );
-			back   = ImageIO.read( new File("res/sky.png") );
-			spike2 = ImageIO.read( new File("res/spike up.png") );
-			spike  = ImageIO.read( new File("res/sky.png") );
+			coin2  = ImageIO.read( new File("JProject/res/coin.png") );
+			coin   = ImageIO.read( new File("JProject/res/sky.png") );
+			back   = ImageIO.read( new File("JProject/res/sky.png") );
+			spike2 = ImageIO.read( new File("JProject/res/spike up.png") );
+			spike  = ImageIO.read( new File("JProject/res/sky.png") );
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
