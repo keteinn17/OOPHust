@@ -1,73 +1,95 @@
 package aims;
 
-import aims.disc.DigitalVideoDisc;
+import aims.media.Book;
+import aims.media.DigitalVideoDisc;
+import aims.media.Media;
 import aims.order.Order;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Aims {
     private static DigitalVideoDisc disc=new DigitalVideoDisc();
+    private static Book book = new Book();
     private static Order order =new Order();
-    private static DigitalVideoDisc[] dvdList;
+    private static List<Media> media = new ArrayList<>();
     private static void show(){
         System.out.println("""
-                What do you want to do?
-                1. Add new digital video
-                2. Add new digital videos
-                3. Remove digital video
-                4. List
-                5. Total cost
-                6. Search
-                7. Get a lucky item
+                Order Management Application: 
+                -------------------------------
+                1. Create new order
+                2. Add item to the order
+                3. List
+                4. Total cost
+                5. Search
+                6. Get a lucky item
+                7. Delete item
                 8. Exit
                 Input your choice: 
                 """);
     }
     public static void main(String[] args) {
         Scanner scanner;
-        String input, title;
+        String input, title, input1;
         do{
             show();
             scanner=new Scanner(System.in);
             input=scanner.nextLine();
             switch (input){
                 case "1": {
-                    order.input(disc,scanner);
-                    order.addDigitalVideoDisc(disc);
-                    disc=new DigitalVideoDisc();
-                    break;
+                    System.out.println("""
+                            1. Digital video disc
+                            2. Book
+                            Input your choice: 
+                            """);
+                    scanner=new Scanner(System.in);
+                    input1=scanner.nextLine();
+                    switch (input1){
+                        case "1":{
+                            order.input(disc,scanner);
+                            break;
+                        }
+                        case "2":{
+                            order.input(book,scanner);
+                            break;
+                        }
+                        default:
+                            System.out.println("Exit");
+                            break;
+                    }
                 }
                 case "2":{
-                    order.addDigitalVideoDisc(scanner);
+                    //order.addDigitalVideoDisc(scanner);
                     break;
                 }
                 case "3": {
                     order.list();
-                    int req;
-                    System.out.println("Input video you want to delete: ");
-                    req=scanner.nextInt();
-                    order.removeDigitalVideoDisc(req);
                     break;
                 }
                 case "4": {
-                    order.list();
-                    break;
-                }
-
-                case "5":{
                     System.out.println("Total cost is: " + order.totalCost());
                     break;
                 }
 
-                case "6":{
+                case "5":{
                     System.out.println("Input title: ");
                     title=scanner.nextLine();
                     System.out.println(order.search(title));
                     break;
                 }
 
+                case "6":{
+                    order.getALuckyItem();
+                    break;
+                }
+
                 case "7":{
-                    System.out.println(order.getALuckyItem());
+                    order.list();
+                    int req;
+                    System.out.println("Input video you want to delete: ");
+                    req=scanner.nextInt();
+                    order.removeMedia(req);
                     break;
                 }
 

@@ -1,11 +1,10 @@
-package aims.disc;
+package aims.media;
 
-public class DigitalVideoDisc {
-    private String title;
-    private String category;
+public class DigitalVideoDisc extends Media{
+
     private String director;
     private int length;
-    private float cost;
+
 
     public DigitalVideoDisc() {
     }
@@ -76,7 +75,7 @@ public class DigitalVideoDisc {
 
     @Override
     public String toString() {
-        return "bai1.DigitalVideoDisc{" +
+        return "DigitalVideoDisc{" +
                 "title='" + title + '\'' +
                 ", category='" + category + '\'' +
                 ", director='" + director + '\'' +
@@ -85,7 +84,12 @@ public class DigitalVideoDisc {
                 '}';
     }
 
-    public boolean search(DigitalVideoDisc disc, String title){
-        return disc.getTitle().toLowerCase().contains(title.toLowerCase());
+    @Override
+    public boolean search(Media media, String title) {
+        return media.getTitle().toLowerCase().contains(title.toLowerCase());
     }
+
+/*    public boolean search(DigitalVideoDisc disc, String title){
+        return disc.getTitle().toLowerCase().contains(title.toLowerCase());
+    }*/
 }
