@@ -1,4 +1,4 @@
-package bai1;
+package aims.disc;
 
 public class DigitalVideoDisc {
     private String title;

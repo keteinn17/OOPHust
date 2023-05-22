@@ -1,4 +1,6 @@
-package bai1;
+package aims.order;
+
+import aims.disc.DigitalVideoDisc;
 
 import java.util.Date;
 import java.util.Scanner;
