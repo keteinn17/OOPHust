@@ -84,4 +84,8 @@ public class DigitalVideoDisc {
                 ", cost=" + cost +
                 '}';
     }
+
+    public boolean search(DigitalVideoDisc disc, String title){
+        return disc.getTitle().toLowerCase().contains(title.toLowerCase());
+    }
 }

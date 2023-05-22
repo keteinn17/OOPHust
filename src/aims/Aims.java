@@ -17,13 +17,15 @@ public class Aims {
                 3. Remove digital video
                 4. List
                 5. Total cost
-                6. Exit
+                6. Search
+                7. Get a lucky item
+                8. Exit
                 Input your choice: 
                 """);
     }
     public static void main(String[] args) {
         Scanner scanner;
-        String input;
+        String input, title;
         do{
             show();
             scanner=new Scanner(System.in);
@@ -57,11 +59,23 @@ public class Aims {
                     break;
                 }
 
+                case "6":{
+                    System.out.println("Input title: ");
+                    title=scanner.nextLine();
+                    System.out.println(order.search(title));
+                    break;
+                }
+
+                case "7":{
+                    System.out.println(order.getALuckyItem());
+                    break;
+                }
+
                 default: {
                     System.out.println("Exit!");
                 }
             }
-        }while(!input.equals("6"));
+        }while(!input.equals("8"));
         scanner.close();
     }
 }

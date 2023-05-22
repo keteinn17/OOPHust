@@ -184,6 +184,23 @@ public class Order {
         }
     }
 
+    public boolean search(String title){
+        boolean res=false;
+        for(int i=1;i<=qtyOrdered;i++){
+            if(itemsOrdered[i].search(itemsOrdered[i],title)){
+                res=true;
+            }
+        }
+        return res;
+    }
+    public DigitalVideoDisc getALuckyItem(){
+        if(qtyOrdered == 0) {
+            System.out.println("Numbers's order is 0! Can't get lucky item");
+            return null;
+        }
+        int ran= (int) (Math.random() * qtyOrdered) + 1;
+        return itemsOrdered[ran];
+    }
     private boolean checkDigitalVideo(DigitalVideoDisc disc){
         return disc != null;
     }

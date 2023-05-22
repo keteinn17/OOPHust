@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="78c92563-9881-4e8d-ab2c-053e9eec011b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bai1/TestPassingParameter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/Aims.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1/Aims.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aims/Aims.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/Aims.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aims/disc/DigitalVideoDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/disc/DigitalVideoDisc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aims/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai1/TestPassingParameter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai8.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai8/DateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bai8/MyDate.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +41,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Tai lieu/Ki_20222/OOP/Lab/Lab03&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "AimsProject",
+    "last_opened_file_path": "D:/Tai lieu/Ki_20222/OOP/Lab/AimsProject",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
-  <component name="RunManager" selected="Application.TestPassingParameter">
+}]]></component>
+  <component name="RunManager" selected="Application.Aims">
+    <configuration name="Aims" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aims.Aims" />
+      <module name="Lab03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aims.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bai8.DateTest" />
       <module name="Lab03" />
@@ -79,6 +101,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Aims" />
         <item itemvalue="Application.TestPassingParameter" />
         <item itemvalue="Application.bai1.Aims" />
         <item itemvalue="Application.DateTest" />
