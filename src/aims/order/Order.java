@@ -160,24 +160,4 @@ public class Order {
         int ran= (int) (Math.random() * itemsOrdered.size()) + 1;
         System.out.println(itemsOrdered.get(ran).toString());
     }
-    private boolean checkDigitalVideo(DigitalVideoDisc disc){
-        return disc != null;
-    }
-    private boolean checkInt(String input){
-        try{
-            Integer.parseInt(input);
-            return true;
-        }catch (NumberFormatException e){
-            return false;
-        }
-    }
-
-    private boolean checkFloat(String input){
-        try{
-            Float.parseFloat(input);
-            return true;
-        }catch (NumberFormatException e){
-            return false;
-        }
-    }
 }
