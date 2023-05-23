@@ -1,8 +1,6 @@
 package aims.order;
 
-import aims.media.Book;
-import aims.media.DigitalVideoDisc;
-import aims.media.Media;
+import aims.media.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,7 +14,7 @@ public class Order {
     private int qtyOrdered=0;
     private Date dateOrdered;
 
-    private List<Media> itemsOrdered=new ArrayList<>();
+    private  List<Media> itemsOrdered=new ArrayList<>();
     public static final int MAX_LIMITED_ORDERS=5;
 
     private static int nbOrders=0;
@@ -41,7 +39,7 @@ public class Order {
     }
 
 
-    public <T extends Media > T input(T t, Scanner scanner){
+    public <T> T input(T t, Scanner scanner){
         if(nbOrders == MAX_LIMITED_ORDERS){
             System.out.println("Cannot order!");
             return null;
@@ -81,7 +79,7 @@ public class Order {
             }
             itemsOrdered.add(disc);
             return (T) disc;
-        }else{
+        }else if(t instanceof Book){
             Book book =new Book();
             boolean check=false;
             System.out.println("Input title: ");
@@ -103,8 +101,59 @@ public class Order {
             }
             itemsOrdered.add(book);
             return (T) book;
-        }
+        }else if(t instanceof CompactDisc){
+            CompactDisc compactDisc = new CompactDisc();
+            boolean check=false;
+            System.out.println("Input title: ");
+            compactDisc.setTitle(scanner.nextLine());
+            System.out.println("Input category: ");
+            compactDisc.setCategory(scanner.nextLine());
+            System.out.println("Input director: ");
+            compactDisc.setDirector(scanner.nextLine());
+            check=false;
+            while (!check){
+                try {
+                    System.out.println("Input cost: ");
+                    compactDisc.setCost(Float.parseFloat(scanner.nextLine()));
+                    if(compactDisc.getCost()<=0){
+                        System.out.println("Invalid input. Please try again");
+                        continue;
+                    }
+                    check=true;
+                }catch (NumberFormatException exception){
+                    System.out.println("Invalid input. Please try again");
+                }
+            }
+            System.out.println("Input artist: ");
+            compactDisc.setArtist(scanner.nextLine());
 
+            itemsOrdered.add(compactDisc);
+            return (T) compactDisc;
+        }
+        return null;
+    }
+
+    public void addTrack(CompactDisc CD, Track track){
+        track=new Track();
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Input track's title: ");
+        track.setTitle(scanner.nextLine());
+        boolean check=false;
+        while (!check){
+            try {
+                System.out.println("Input length: ");
+                track.setLength(Integer.parseInt(scanner.nextLine()));
+                if(track.getLength()<=0){
+                    System.out.println("Invalid input. Please try again");
+                    continue;
+                }
+                check=true;
+            }catch (NumberFormatException exception){
+                System.out.println("Invalid input. Please try again");
+            }
+        }
+        CD.addTrack(track);
+        System.out.println("Add success");
     }
 
     public void removeMedia(int input){

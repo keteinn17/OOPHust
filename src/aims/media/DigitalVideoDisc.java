@@ -1,6 +1,8 @@
 package aims.media;
 
-public class DigitalVideoDisc extends Media{
+import aims.service.Playable;
+
+public class DigitalVideoDisc extends Dics implements Playable {
 
     private String director;
     private int length;
@@ -89,7 +91,9 @@ public class DigitalVideoDisc extends Media{
         return media.getTitle().toLowerCase().contains(title.toLowerCase());
     }
 
-/*    public boolean search(DigitalVideoDisc disc, String title){
-        return disc.getTitle().toLowerCase().contains(title.toLowerCase());
-    }*/
+    @Override
+    public void play() {
+        System.out.println("Playing DVD: " + this.getTitle());
+        System.out.println("DVD length: " + this.getLength());
+    }
 }

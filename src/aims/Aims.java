@@ -1,8 +1,6 @@
 package aims;
 
-import aims.media.Book;
-import aims.media.DigitalVideoDisc;
-import aims.media.Media;
+import aims.media.*;
 import aims.order.Order;
 
 import java.util.ArrayList;
@@ -12,6 +10,7 @@ import java.util.Scanner;
 public class Aims {
     private static DigitalVideoDisc disc=new DigitalVideoDisc();
     private static Book book = new Book();
+    private static CompactDisc CD = new CompactDisc();
     private static Order order =new Order();
     private static List<Media> media = new ArrayList<>();
     private static void show(){
@@ -30,6 +29,9 @@ public class Aims {
                 """);
     }
     public static void main(String[] args) {
+        MemoryDaemon memoryDaemon=new MemoryDaemon();
+        Thread thread=new Thread(memoryDaemon);
+        thread.setDaemon(true);
         Scanner scanner;
         String input, title, input1;
         do{
@@ -41,6 +43,7 @@ public class Aims {
                     System.out.println("""
                             1. Digital video disc
                             2. Book
+                            3. Compact disc
                             Input your choice: 
                             """);
                     scanner=new Scanner(System.in);
@@ -52,6 +55,10 @@ public class Aims {
                         }
                         case "2":{
                             order.input(book,scanner);
+                            break;
+                        }
+                        case "3":{
+                            order.input(CD,scanner);
                             break;
                         }
                         default:
