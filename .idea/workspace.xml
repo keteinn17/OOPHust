@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c92563-9881-4e8d-ab2c-053e9eec011b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aims/media/CompactDisc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aims/media/Dics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aims/media/MemoryDaemon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aims/media/Track.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aims/service/Playable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aims/Aims.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/Aims.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aims/media/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/media/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aims/media/CompactDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/media/CompactDisc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aims/media/DigitalVideoDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/media/DigitalVideoDisc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aims/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/order/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +44,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "AimsProject",
-    "last_opened_file_path": "D:/Project OOP/max-flow-algorithms-visualization",
+    "last_opened_file_path": "D:/Tai lieu/Ki_20222/OOP/Lab/AimsProject",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>

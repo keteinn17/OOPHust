@@ -3,7 +3,7 @@ package aims.media;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book extends Media{
+public class Book extends Media implements Comparable{
 
     private List<String> authors=new ArrayList<>();
 
@@ -83,4 +83,8 @@ public class Book extends Media{
         return authors;
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }

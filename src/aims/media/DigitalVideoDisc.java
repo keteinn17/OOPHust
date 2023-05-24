@@ -2,7 +2,7 @@ package aims.media;
 
 import aims.service.Playable;
 
-public class DigitalVideoDisc extends Dics implements Playable {
+public class DigitalVideoDisc extends Dics implements Playable,Comparable {
 
     private String director;
     private int length;
@@ -95,5 +95,12 @@ public class DigitalVideoDisc extends Dics implements Playable {
     public void play() {
         System.out.println("Playing DVD: " + this.getTitle());
         System.out.println("DVD length: " + this.getLength());
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if(o == null ||getClass()!=o.getClass()) return 0;
+        DigitalVideoDisc disc = (DigitalVideoDisc) o;
+        return this.getTitle().compareToIgnoreCase(disc.getTitle());
     }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class CompactDisc extends Dics implements Playable {
+public class CompactDisc extends Dics implements Playable, Comparable {
     private String artist;
     private int length=0;
     private final List<Track> tracks = new ArrayList<>();
@@ -77,5 +77,11 @@ public class CompactDisc extends Dics implements Playable {
         for (Track track:tracks){
             track.play();
         }
+    }
+
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

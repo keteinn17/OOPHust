@@ -106,5 +106,7 @@ public class Aims {
             }
         }while(!input.equals("8"));
         scanner.close();
+
+
     }
 }
