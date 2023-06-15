@@ -1,8 +1,10 @@
 package aims.media;
 
+import aims.PlayerException;
 import aims.service.Playable;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
@@ -69,10 +71,22 @@ public class CompactDisc extends Dics implements Playable, Comparable {
     }
 
     @Override
-    public void play() {
-        if(tracks.isEmpty()){
-            System.out.println("CD is empty!");
-            return;
+    public void play() throws PlayerException {
+        if(this.getLength()<=0){
+            System.err.println("Error: CD length is 0");
+            throw new PlayerException();
+        }
+        System.out.println("Play CD: "+getTitle());
+        System.out.println("CD length: "+getLength());
+        Iterator ite = tracks.iterator();
+        Track nextTrack;
+        while(ite.hasNext()){
+            nextTrack= (Track) ite.next();
+            try{
+                nextTrack.play();
+            }catch (PlayerException e){
+                e.printStackTrace();
+            }
         }
         for (Track track:tracks){
             track.play();

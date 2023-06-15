@@ -1,5 +1,6 @@
 package aims.media;
 
+import aims.PlayerException;
 import aims.service.Playable;
 
 import java.util.Objects;
@@ -39,7 +40,11 @@ public class Track implements Playable {
     }
 
     @Override
-    public void play() {
+    public void play() throws PlayerException {
+        if(this.getLength()<=0){
+            System.err.println("Error: Track length is 0");
+            throw new PlayerException();
+        }
         System.out.println("Play track: "+getTitle());
         System.out.println("Track length: "+getLength());
     }

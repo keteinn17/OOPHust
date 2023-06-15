@@ -1,5 +1,6 @@
 package aims.media;
 
+import aims.PlayerException;
 import aims.service.Playable;
 
 public class DigitalVideoDisc extends Dics implements Playable,Comparable {
@@ -92,7 +93,11 @@ public class DigitalVideoDisc extends Dics implements Playable,Comparable {
     }
 
     @Override
-    public void play() {
+    public void play() throws PlayerException {
+        if(this.getLength()<=0){
+            System.err.println("Error: DVD length is 0");
+            throw new PlayerException();
+        }
         System.out.println("Playing DVD: " + this.getTitle());
         System.out.println("DVD length: " + this.getLength());
     }

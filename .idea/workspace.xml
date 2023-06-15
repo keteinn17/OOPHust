@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c92563-9881-4e8d-ab2c-053e9eec011b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/aims/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aims/a.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aims/Aims.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/Aims.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aims/media/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/media/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aims/media/CompactDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/media/CompactDisc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aims/media/DigitalVideoDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aims/media/DigitalVideoDisc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +42,16 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "AimsProject",
-    "last_opened_file_path": "D:/Tai lieu/Ki_20222/OOP/Lab/AimsProject",
+    "last_opened_file_path": "D:/Project OOP/StoreManagementSystem",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Aims">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Tai lieu\Ki_20222\OOP\Lab\AimsProject\src\aims" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Aims" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aims.Aims" />
       <module name="Lab03" />
@@ -68,6 +71,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bai8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aims.Main" />
+      <module name="Lab03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aims.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,6 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Aims" />
         <item itemvalue="Application.TestPassingParameter" />
         <item itemvalue="Application.bai1.Aims" />
